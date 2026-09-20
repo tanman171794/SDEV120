@@ -1,0 +1,35 @@
+Question: You have been tasked with reviewing and updating this program. What steps would you take to identify any issues in the code?
+
+Your Response: I would start with the declarations and make sure every variable is declared and spelled the same way everywhere it is used. Then I would desk check the program line by line with sample numbers and compare the output to what I worked out by hand. I would also check that every prompt has a matching input and that every loop has a way to end.
+
+Question: What actions could the developer have taken to minimize the number of errors?
+
+Your Response: Pick one naming convention and stick to it. Keep each prompt and its input together instead of splitting them up. Use parentheses in calculations instead of relying on order of operations. Desk check with sample data before calling it finished, which would have caught the wrong average and the loop that never ended.
+
+Debugging Exercise:
+
+// This pseudocode is intended to determine whether students have
+// passed or failed a course; student needs to average 60 or
+// more on two tests.
+start
+   Declarations
+      num firstTest
+      num secondTest
+      num average
+      num PASSING = 60
+   output "Enter first score or 0 to quit "
+   input firstTest
+   while firstTest <> 0
+      output "Enter second score "
+      input secondTest
+      average = (firstTest + secondTest) / 2
+      output "Average is ", average
+      if average >= PASSING then
+         output "Pass"
+      else
+         output "Fail"
+      endif
+      output "Enter first score or 0 to quit "
+      input firstTest
+   endwhile
+stop
